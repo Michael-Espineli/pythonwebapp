@@ -11,7 +11,7 @@ default_app = initialize_app(cred)
 db = firestore.client()
 todo_ref = db.collection('toDoTesters')
 
-@app.route('/signIn')
+@app.route('/login')
 def signIn():
     """
         create() : Add document to Firestore collection with request body
