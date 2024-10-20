@@ -32,7 +32,9 @@ def hello() -> str:
     logger.info("Child logger with trace Id.")
 
     return "Hello, Mrs Chris Dean, Welcome to the Party!"
-
+@app.route('/signIn')
+def signIn():
+    return 'Sign In'
 
 def shutdown_handler(signal_int: int, frame: FrameType) -> None:
     logger.info(f"Caught Signal {signal.strsignal(signal_int)}")
