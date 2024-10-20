@@ -29,4 +29,4 @@ def test_system(app: flask.app.Flask, client: FlaskClient) -> None:
 
     resp = requests.get(BASE_URL, headers={"Authorization": f"Bearer {ID_TOKEN}"})
     assert resp.status_code == 200
-    assert resp.text == "Hello, World!"
+    assert resp.text == "More than just a hello World"
