@@ -11,8 +11,8 @@ default_app = initialize_app(cred)
 db = firestore.client()
 todo_ref = db.collection('toDoTesters')
 
-@app.route('/login')
-def signIn():
+@app.route('/signUp')
+def signUp():
     """
         create() : Add document to Firestore collection with request body
         Ensure you pass a custom ID as part of json body in post request
