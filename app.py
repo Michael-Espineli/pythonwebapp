@@ -38,9 +38,9 @@ def hello() -> str:
 @app.route('/hello')
 def hello():
     return "Hello"
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('hello.html', person=name)
+# @app.route('/hello/<name>')
+# def hello(name=None):
+#     return render_template('hello.html', person=name)
     
 def shutdown_handler(signal_int: int, frame: FrameType) -> None:
     logger.info(f"Caught Signal {signal.strsignal(signal_int)}")
