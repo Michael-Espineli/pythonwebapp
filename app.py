@@ -39,8 +39,8 @@ def hello() -> str:
 @app.route('/hello/<name>')
 def name2(name=None):
     return render_template('hello.html', person=name)
-@app.route('func')
-def func()->str:
+@app.route('/func')
+def sayingHello()->str:
     return localFirebaseTools.my_function()
 def shutdown_handler(signal_int: int, frame: FrameType) -> None:
     logger.info(f"Caught Signal {signal.strsignal(signal_int)}")
