@@ -21,7 +21,7 @@ from types import FrameType
 from flask import Flask, request, jsonify, render_template
 from utils.logging import logger
 import os
-from lib import firebase
+import lib.firebase as localFirebaseTools
 
 app = Flask(__name__)
 
@@ -41,7 +41,7 @@ def name2(name=None):
     return render_template('hello.html', person=name)
 @app.route('func')
 def func()->str:
-    return firebase.my_function()
+    return localFirebaseTools.my_function()
 def shutdown_handler(signal_int: int, frame: FrameType) -> None:
     logger.info(f"Caught Signal {signal.strsignal(signal_int)}")
 
