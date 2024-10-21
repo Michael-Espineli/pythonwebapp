@@ -35,9 +35,9 @@ def hello() -> str:
 
     return "Hello, Mrs Chris Dean, Welcome to the Party!"
 
-@app.route('/hello')
-def hello()-> str:
-    return "Hello"
+# @app.route('/hello')
+# def hello()-> str:
+#     return "Hello"
 # @app.route('/hello/<name>')
 # def hello(name=None):
 #     return render_template('hello.html', person=name)
