@@ -18,7 +18,7 @@ from types import FrameType
 import signal
 import sys
 from types import FrameType
-from flask import Flask, request, jsonify#, render_template
+from flask import Flask, request, jsonify, render_template
 from utils.logging import logger
 import os
 
@@ -35,12 +35,12 @@ def hello() -> str:
 
     return "Hello, Mrs Chris Dean, Welcome to the Party!"
 
-# @app.route('/hello')
-# def hello()-> str:
-#     return "Hello"
-# @app.route('/hello/<name>')
-# def hello(name=None):
-#     return render_template('hello.html', person=name)
+@app.route('/hello')
+def name()-> str:
+    return "Hello"
+@app.route('/hello/<name>')
+def name2(name=None):
+    return render_template('hello.html', person=name)
     
 def shutdown_handler(signal_int: int, frame: FrameType) -> None:
     logger.info(f"Caught Signal {signal.strsignal(signal_int)}")
