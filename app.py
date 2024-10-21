@@ -18,7 +18,7 @@ from types import FrameType
 import signal
 import sys
 from types import FrameType
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify#, render_template
 from utils.logging import logger
 import os
 
