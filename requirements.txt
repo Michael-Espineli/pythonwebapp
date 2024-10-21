@@ -5,4 +5,4 @@ requests==2.32.0
 structlog==24.1.0
 
 google-auth==2.3.2
-firebase_admin
+firebase_admin==12.6.0
